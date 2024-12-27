@@ -1,0 +1,86 @@
+using System;
+using System.Windows.Forms;
+
+namespace RobloxUI
+{
+    public partial class MainForm : Form
+    {
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
+        // Hàm xử lý sự kiện cho nút "Attack"
+        private void btnAttack_Click(object sender, EventArgs e)
+        {
+            // Đây là nơi bạn xử lý hành động "Attack"
+            MessageBox.Show("Executing Attack action...");
+            // Thêm mã logic để thực hiện hành động "Attack" tại đây
+        }
+
+        // Hàm xử lý sự kiện cho nút "Execute"
+        private void btnExecute_Click(object sender, EventArgs e)
+        {
+            // Đây là nơi bạn xử lý hành động "Execute"
+            MessageBox.Show("Executing Execute action...");
+            // Thêm mã logic để thực hiện hành động "Execute" tại đây
+        }
+
+        // Hàm xử lý sự kiện cho nút "Kill"
+        private void btnKill_Click(object sender, EventArgs e)
+        {
+            // Đây là nơi bạn xử lý hành động "Kill"
+            MessageBox.Show("Executing Kill action...");
+            // Thêm mã logic để thực hiện hành động "Kill" tại đây
+        }
+
+        // Khởi tạo giao diện UI
+        private void InitializeComponent()
+        {
+            this.btnAttack = new System.Windows.Forms.Button();
+            this.btnExecute = new System.Windows.Forms.Button();
+            this.btnKill = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            
+            // btnAttack
+            this.btnAttack.Location = new System.Drawing.Point(50, 50);
+            this.btnAttack.Name = "btnAttack";
+            this.btnAttack.Size = new System.Drawing.Size(120, 40);
+            this.btnAttack.TabIndex = 0;
+            this.btnAttack.Text = "Attack";
+            this.btnAttack.UseVisualStyleBackColor = true;
+            this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
+            
+            // btnExecute
+            this.btnExecute.Location = new System.Drawing.Point(50, 100);
+            this.btnExecute.Name = "btnExecute";
+            this.btnExecute.Size = new System.Drawing.Size(120, 40);
+            this.btnExecute.TabIndex = 1;
+            this.btnExecute.Text = "Execute";
+            this.btnExecute.UseVisualStyleBackColor = true;
+            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
+            
+            // btnKill
+            this.btnKill.Location = new System.Drawing.Point(50, 150);
+            this.btnKill.Name = "btnKill";
+            this.btnKill.Size = new System.Drawing.Size(120, 40);
+            this.btnKill.TabIndex = 2;
+            this.btnKill.Text = "Kill";
+            this.btnKill.UseVisualStyleBackColor = true;
+            this.btnKill.Click += new System.EventHandler(this.btnKill_Click);
+            
+            // MainForm
+            this.ClientSize = new System.Drawing.Size(220, 250);
+            this.Controls.Add(this.btnKill);
+            this.Controls.Add(this.btnExecute);
+            this.Controls.Add(this.btnAttack);
+            this.Name = "MainForm";
+            this.Text = "Roblox Executor";
+            this.ResumeLayout(false);
+        }
+
+        private System.Windows.Forms.Button btnAttack;
+        private System.Windows.Forms.Button btnExecute;
+        private System.Windows.Forms.Button btnKill;
+    }
+}
